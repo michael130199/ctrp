@@ -30,3 +30,28 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 const app = new Vue({
     el: '#app',
 });
+
+
+var imagenes=new Array(
+    'img/background-1.jpg',
+    'img/background-2.jpg',
+    'img/background-3.jpg',
+    'img/background-4.jpg',
+    'img/background-5.jpg'
+);
+var contador=0;
+
+function rotarImagenes() {
+    document.getElementById("background").style.background="url('"+imagenes[contador]+"')";
+    if(contador==4) {
+        contador=0;
+    } else {
+        contador++;
+    }
+}
+
+onload=function()
+{
+    rotarImagenes();
+    setInterval(rotarImagenes,5000);
+}

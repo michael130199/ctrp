@@ -1,12 +1,13 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url("https://fonts.googleapis.com/css?family=Nunito");
 
 // Variables
-@import 'variables';
+@import "variables";
 
 // Bootstrap
-@import '~bootstrap/scss/bootstrap';
+@import "~bootstrap/scss/bootstrap";
 
+/* Inicio de Login*/
 .background-new {
     height: 100vh;
     width: 100%;
@@ -15,33 +16,52 @@
     background-position: center center !important;
     background-size: cover !important;
     transition: background 2s linear;
-    
 }
 
 .clip-new {
-    background: #1abc9c; 
-    position: absulute; 
-    top: 0%; 
+    position: absolute;
+    top: 0%;
+    left: 2px;
     height: 100vh;
-     width:100%; 
-     border-right:5px solid #1abc9c; 
-     clip-path: polygon(0 15%   , 100% 0   , 100% 100%); 
+    width: 100%;
+}
+
+.polygon-1 {
+    background-image: linear-gradient(
+        to right,
+        rgb(26, 188, 156, 0.2),
+        #089a7a
+    );
+    clip-path: polygon(0 15%, 100% 0, 100% 100%);
+}
+
+.polygon-2 {
+    background: #5effde;
+    clip-path: polygon(100% 0, 90% 0, 0% 70%, 100% 100%);
+    z-index: 1000;
+    opacity: 0.6;
+}
+
+.polygon-3 {
+    background-image: linear-gradient(to right, rgb(37, 91, 151, 0.6), #255b97);
+    clip-path: polygon(100% 0, 30% 100%, 100% 100%);
+    z-index: 2000;
 }
 
 .content-login {
-    background: #255B97; 
-    position: absolute; 
-    top: 0%; 
-    height: 100vh; 
-    width:100%;
+    background: #255b97;
+    position: absolute;
+    top: 0%;
+    height: 100vh;
+    width: 100%;
 }
 
 .card-new {
-    margin-top: 10vh; 
-    margin-right: 20px; 
-    margin-left: 20px; 
-    color: #fff; 
-    background: #255B97;
+    margin-top: 10vh;
+    margin-right: 20px;
+    margin-left: 20px;
+    color: #fff;
+    background: #255b97;
 }
 
 .img-new {
@@ -49,197 +69,52 @@
     text-align: center;
 }
 
-.avatar{
+.avatar {
     width: 250px;
     margin: auto;
 }
 
-
 .btn-new {
-    background: #1abc9c; 
+    background: #1abc9c;
     border: 2px solid #1abc9c;
 }
 
 .btn-new:hover {
-    background: #2bcdad; 
+    background: #2bcdad;
     border: 2px solid#1abc9c;
 }
 
-.p-cero {
+.p-zero {
     padding: 0%;
 }
 
-//login
+@media (max-width: 767px) {
+    .p-zero {
+        display: none;
+    }
+    .card-new {
+        margin-top: 2vh;
+    }
+}
+/*Fin del Login*/
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-  body{ font-family: 'nunito';}
-  
-  .container{
-    width: 100vw;
-    height: 100vh;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 7rem;
-    padding: 0 2rem;
-  }
-  
-  .img{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
-  
-  .img img { width: 500px; }
-  
-  .login-container{
-    display: flex;
-    align-items: center;
-    text-align: center;
-  }
-  
-  form{
-     width: 360px; 
-     margin: 70px auto;
-  }
-  .avatar{
-    width: 250px;
-    margin-left: 50px;
-  }
-  
-  form h2{
-    font-size: 2.9rem;
-    text-transform: uppercase;
-    margin-left: 50px;
-    color: #333;
-  }
-  
-  .input-div{
-    position: relative;
-    display: grid;
-    grid-template-columns: 7% 93%;
-    margin: 25px 0;
-    padding: 5px 0;
-    border-bottom: 2px solid #d9d9d9;    
-  }
-  
-  .input-div:after, .input-div:before{
-    content: '';
-    position: absolute;
-    bottom: -1px;
-    width: 0;
-    height: 2.5px;
-    background-color: #4285F4; 
-    transition: .3s;
-  }
-  
-  .input-div:after{ right: 50%; }
-  .input-div:before{ left: 50%; }
-  
-  .input-div.focus div h5{
-    top: -5px;
-    font-size: 15px;
-  }
-  .input-div.focus div h5{
-    color: #4285F4; 
-  }
-  
-  .input-div.focus div h5:after, .input-div.focus div h5:before {
-    background-color: #4285F4; 
-    transition: .3s;
-  }
-  
-  .input-div.focus:after, .input-div.focus:before{ width: 50%; }
-  .input-div.one{ margin-top: 0; margin-top: 50px;}
-  .input-div.two{ margin-bottom: 4px;}
-  
-  .i{
+/* Inicio de Home */
+
+.app-new {
+    background: gray;
+    height: 93vh;
+    /*IMPORTANTE*/
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .input-div > div{
-    position: relative;
-    height: 45px;
-  }
-  
-  .input-div > div h5{
-    position: absolute;
-    left: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #999;
-    font-size: 18px;
-    transition: .3s;
-  }
-  
-  .input{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;  
-    border: none;
-    outline: none;
-    background: none;
-    padding: 0.5rem 0.7rem;
-    font-size: 1.2rem;
-    color: #555;      
-  }
-  
-  a{
-    display: block;
-    text-align: right;
-    text-decoration: none;
-    color: #999;
-    font-size: 0.9rem;
-    transition: .3s;
-    font-weight: bold;
-  }
-   a:hover{ color: #3B5997 }
-  
-   .btn{
-    display: block;
-    font-family: 'nunito';
-    width: 100%;
-    height: 50px;
-    border-radius: 25px;
-    margin: 2.3rem 0;
-    font-size: 1.2rem;
-    font-weight: bold;
-    outline: none;
-    border: none;
-    text-transform: uppercase;
-    background-image: linear-gradient(to right, #4285F4, rgb(31, 105, 224), #4285F4);
-    cursor: pointer;
-    color: #fff;
-    background-size: 200%; 
-    transition: .5s;
-  }
-  
-  .btn:hover{ background-position: right; }
-  
-  @media screen and (max-width: 1050px){
-    .container{ grid-gap: 5rem; }
-  }
-  
-  @media screen and (max-width: 1000px){
-    form{ width: 290px; }
-    form h2{
-      font-size: 2.4rem;
-      margin: 8px 0;
-    }
-    .img img {
-      width: 400px;
-    }
-  }
-  
-  @media screen and (max-width: 900px){
-    .img{ display: none;}
-    .container{ grid-template-columns: 1fr; }
-    .login-conatiner{justify-content: center}
-  }
+}
+
+.card-dash {
+    background: green;
+    height: 30vh;
+    width: 20%;
+    border: 1px solid black;
+    margin: 0 10px;
+}
+
+/* Fin de Home*/

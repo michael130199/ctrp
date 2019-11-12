@@ -11116,7 +11116,6 @@ a.text-dark:focus {
 .clip-new {
   position: absolute;
   top: 0%;
-  left: 2px;
   height: 100vh;
   width: 100%;
 }
@@ -11137,6 +11136,7 @@ a.text-dark:focus {
 }
 
 .polygon-3 {
+  left: 0.3px;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(37, 91, 151, 0.6)), to(#255b97));
   background-image: linear-gradient(to right, rgba(37, 91, 151, 0.6), #255b97);
   -webkit-clip-path: polygon(100% 0, 30% 100%, 100% 100%);
@@ -11199,8 +11199,14 @@ a.text-dark:focus {
 /* Inicio de Home */
 
 .app-new {
-  background: gray;
-  height: 93vh;
+  /*background: linear-gradient(
+      to left,
+      rgb(8, 154, 122, .8), 
+      rgb(94, 255, 222, 1), 
+      rgb(94, 255, 222, 1),
+      rgb(37, 91, 151, .8));*/
+  background-color: #f1f1f1;
+  height: 100vh;
   /*IMPORTANTE*/
   display: -webkit-box;
   display: flex;
@@ -11212,11 +11218,236 @@ a.text-dark:focus {
 
 .card-dash {
   background: green;
-  height: 30vh;
+  height: 20vh;
   width: 20%;
   border: 1px solid black;
   margin: 0 10px;
 }
 
+.wrap {
+  position: relative;
+  background: #089a7a;
+  width: 20%;
+  height: 20vh;
+  margin: 0 50px;
+  -webkit-transition: background 1s ease;
+  transition: background 1s ease;
+}
+
+.wrap-polygon {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(36, 90, 151, 0.6)), to(#255b97));
+  background-image: linear-gradient(rgba(36, 90, 151, 0.6), #255b97);
+  padding: 0%;
+  position: absolute;
+  top: -49px;
+  left: 50%;
+  width: 84%;
+  height: 20px;
+  -webkit-clip-path: polygon(100% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(100% 0, 100% 100%, 0% 100%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: top 1s ease;
+  transition: top 1s ease;
+}
+
+.wrap:hover {
+  background: rgba(8, 154, 122, 0.5);
+  -webkit-transition: background 1s ease;
+  transition: background 1s ease;
+}
+
+.wrap:hover > .wrap-polygon {
+  top: -80px;
+}
+
+.circle-load {
+  position: relative;
+  margin: 0 50px;
+  width: 20%;
+  height: 20vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(#089a7a), color-stop(#5effde), to(#255b97));
+  background: linear-gradient(#089a7a, #5effde, #255b97);
+  -webkit-animation: animate 1.2s linear infinite;
+          animation: animate 1.2s linear infinite;
+}
+
+.circle-load span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#089a7a), color-stop(#5effde), to(#255b97));
+  background: linear-gradient(#089a7a, #5effde, #255b97);
+}
+
+.circle-load > .load-1 {
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+}
+
+.circle-load > .load-2 {
+  -webkit-filter: blur(10px);
+          filter: blur(10px);
+}
+
+.circle-load > .load-3 {
+  -webkit-filter: blur(25px);
+          filter: blur(25px);
+}
+
+.circle-load > .load-4 {
+  -webkit-filter: blur(50px);
+          filter: blur(50px);
+}
+
+.circle-wrap {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  background: #f1f1f1;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+}
+
+.circle-wrap p {
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-transition: color 1s ease;
+  transition: color 1s ease;
+}
+
+.svg-card {
+  background: transparent;
+  color: transparent;
+  -webkit-perspective: 1000;
+          perspective: 1000;
+  position: absolute;
+  width: 84%;
+  height: 15vh;
+  top: -30px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+  font-weight: 600;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.circle-wrap:hover > .svg-card {
+  background: #255b97;
+  top: -61px;
+  color: #f1f1f1;
+}
+
+.circle-wrap:hover > p {
+  color: transparent;
+}
+
+/*
+.circle-load:after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    background: #f1f1f1;
+    border: solid white 10px;
+}*/
+
 /* Fin de Home*/
+
+/*Main Menu*/
+
+.main-menu {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(8, 154, 122, 0.8)), color-stop(#5effde), color-stop(rgba(37, 91, 151, 0.8)), color-stop(#255b97), to(#255b97));
+  background: linear-gradient(rgba(8, 154, 122, 0.8), #5effde, rgba(37, 91, 151, 0.8), #255b97, #255b97);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100vh;
+  left: 0;
+  width: 60px;
+  overflow: hidden;
+  -webkit-transition: width 0.2s linear;
+  transition: width 0.2s linear;
+  box-shadow: 1px 0 15px rgba(0, 0, 0, 0.5);
+  opacity: 1;
+  z-index: 1000;
+}
+
+.menu-left {
+  margin: 100px 0;
+  padding: 0%;
+}
+
+.menu-row {
+  margin: 1px 0;
+  padding-top: 10px;
+  position: relative;
+  display: block;
+  width: 250px;
+  -webkit-transition: background 0.6s linear;
+  transition: background 0.6s linear;
+}
+
+.menu-col {
+  position: relative;
+  width: 255px;
+  display: table;
+  color: #f1f1f1;
+  font-size: 13px;
+  font-style: none !important;
+  text-decoration: none;
+  font-family: "Strait", sans-serif;
+  -webkit-transition: color 0.6s linear;
+  transition: color 0.6s linear;
+}
+
+.menu-col span {
+  margin: 0 10px;
+}
+
+.icon-i {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  margin: 0 5px;
+}
+
+.icon-i i {
+  -webkit-text-stroke: 1px #255b97;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+  font-size: 24px;
+}
+
+.menu-row:hover {
+  background: #f1f1f1;
+}
+
+.menu-row:hover .menu-col {
+  color: #255b97;
+  text-decoration: none;
+}
+
+.main-menu:hover {
+  width: 200px;
+}
 

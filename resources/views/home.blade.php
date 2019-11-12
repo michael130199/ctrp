@@ -4,14 +4,28 @@
 <div class="container-fluid">
     <div class="row justify-content-center">
         <div class="col-md-12 app-new">
-            <div class="card-dash">
-                
+
+            <div class="circle-load">
+                <span class="load-1"></span>
+                <span class="load-2"></span>
+                <span class="load-3"></span>
+                <span class="load-4"></span>
+                <div class="circle-wrap">
+                    <p>Constancia de Trabajo</p>
+                    <div class="svg-card">Constancia de Trabajo</div>
+                </div>
             </div>
 
-            <div class="card-dash">
-            </div>
 
-            <div class="card-dash">
+            <div class="circle-load">
+                <span class="load-1"></span>
+                <span class="load-2"></span>
+                <span class="load-3"></span>
+                <span class="load-4"></span>
+                <div class="circle-wrap">
+                    <p>Recibos de Pago</p>
+                    <div class="svg-card">Recibos de Pago</div>
+                </div>
             </div>
         </div>
     </div>
